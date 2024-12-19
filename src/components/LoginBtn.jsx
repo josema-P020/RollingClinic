@@ -15,7 +15,7 @@ function LoginBtn() {
     <button type="submit" className="btn btn-primary mx-3" onClick={openModal}>
       Inicia Sesión
     </button>
-    {/* <Login show={show} closeModal={closeModal} /> */}
+    <Login show={show} closeModal={closeModal} />
     </>
     
   );
