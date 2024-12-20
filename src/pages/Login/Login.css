@@ -9,26 +9,32 @@
   }
 
   .login-container {
-    /* max-width: 400px; */
+    max-width: 550px;
     /* margin: 0 auto; */
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.795);
+    background-color: rgba(0, 0, 0, 0.3);
     border-radius: 15px;
-    border: solid 2px black;
-    /* box-shadow: 0px 4px 8px rgba(81, 54, 54, 0.1); */
+    /* border: solid 1px black; */
+    box-shadow: 0px 4px 8px rgb(0, 0, 0);
+    font-size: large;
   }
-  
-  .imgLogin {
-    background-image: url('/src/assets/imgparalogin.avif');
+
+  .imgContainer {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('/src/assets/bgLogin.jpg');
     background-size: cover; /* Ajusta el tamaño de la imagen */
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  .container-fluid {
+ 
+
+  /* .container-fluid {
     background: linear-gradient(135deg, #a793bc 0%, #377ef8 100%);
     height: 100vh;
     
-  }
+  } */
 
 
