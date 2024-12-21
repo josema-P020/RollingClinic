@@ -15,7 +15,6 @@ function RegisterPatient() {
   };
 
   console.log(isAccepted);
-  
 
   const [showModal, setShowModal] = useState(false);
 
@@ -35,7 +34,6 @@ function RegisterPatient() {
 
   const maxDate = year + "-" + month + "-" + day;
   console.log(maxDate);
-
 
   const [formValues, setFormValues] = useState({
     name: "",
@@ -113,8 +111,7 @@ function RegisterPatient() {
     }
 
     const passwordRegex =
-  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,20}$/;
-
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,20}$/;
 
     if (!passwordRegex.test(formValues.password)) {
       alert(
@@ -153,7 +150,6 @@ function RegisterPatient() {
 
     openModal();
 
-
     setFormValues({
       name: "",
       tel: "",
@@ -172,7 +168,7 @@ function RegisterPatient() {
   };
   return (
     <>
-      <div className="container">
+      <div className="container bg-form">
         {/* <div className="row">
           <div className="col-12">
           </div>
@@ -242,7 +238,9 @@ function RegisterPatient() {
                 onChange={handleChange}
                 value={formValues.city}
               >
-                <option value="" disabled >-- Elegir una opción --</option>
+                <option value="" disabled>
+                  -- Elegir una opción --
+                </option>
                 <option value="San Miguel de Tucuman">
                   San Miguel de Tucuman
                 </option>
@@ -281,7 +279,9 @@ function RegisterPatient() {
                 value={formValues.obraSocial}
                 onChange={handleChange}
               >
-                <option value="" disabled >-- Elegir una opción --</option>
+                <option value="" disabled>
+                  -- Elegir una opción --
+                </option>
                 <option value="OSDE">OSDE</option>
                 <option value="SWISS MEDICAL">SWISS MEDICAL</option>
                 <option value="PRENSA">PRENSA</option>
@@ -321,7 +321,9 @@ function RegisterPatient() {
                 value={formValues.genre}
                 onChange={handleChange}
               >
-                <option value="" disabled >-- Elegir una opción --</option>
+                <option value="" disabled>
+                  -- Elegir una opción --
+                </option>
                 <option value="female">Mujer</option>
                 <option value="male">Varon</option>
                 <option value="other">Otro</option>
@@ -401,13 +403,19 @@ function RegisterPatient() {
             {/* esto debe mandar al error 404 */}
 
             <div className="form-check form-switch">
-              <input className="form-check-input" type="checkbox" role="switch" id="" required onChange={handleCheckboxClick} />
+              <input
+                className="form-check-input"
+                type="checkbox"
+                role="switch"
+                id=""
+                required
+                onChange={handleCheckboxClick}
+              />
             </div>
-            
+
             <p>
               Acepto los <strong>Terminos y Condiciones</strong>
             </p>
-            
           </div>
 
           <div className="mb-3 d-grid">
@@ -415,15 +423,17 @@ function RegisterPatient() {
               Registrarse
             </button>
           </div>
-          
         </form>
         <div className="mb-3 d-grid text-center d-flex justify-content-center align-items-center">
-            <p className="mx-3 pt-3">¿Ya tienes una cuenta?</p>
-            {/* falta agregar funcionalidad al boton para que lleve a iniciar sesion */}
-            <button type="submit" className="btn btn-primary mx-3">
-              Inicia sesion
-            </button>
-          </div>
+          <p className="mx-3 pt-3">¿Ya tienes una cuenta?</p>
+          {/* falta agregar funcionalidad al boton para que lleve a iniciar sesion */}
+          <button type="submit" className="btn btn-primary mx-3">
+            Inicia sesion
+          </button>
+        </div>
+        <div className="mb-3 d-grid text-center">
+          <p>¿Sos Profesional de Salud? Registrate <a href="/registerDoctor">acá</a> para trabajar con nosotros</p>
+        </div>
       </div>
       <PatientRegisterCorrect showModal={showModal} closeModal={closeModal} />
     </>

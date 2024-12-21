@@ -1,5 +1,5 @@
 import React from 'react'
-import "./drRegisterCorrect.css";
+import "./registerCorrect.css";
 import { Link } from 'react-router-dom';
 
 function PatientRegisterCorrect( { showModal, closeModal} ) {
@@ -9,7 +9,7 @@ function PatientRegisterCorrect( { showModal, closeModal} ) {
     <div className="modal-overlay">
         <div className="modal-content">
           <div className="row text-center text-dark modal-bg">
-            <h3>
+            <h3 className='mt-3'>
               <i className="bi bi-check2-all"></i> REGISTRO EXITOSO
             </h3>
             <div className="modal-footer">
@@ -23,7 +23,7 @@ function PatientRegisterCorrect( { showModal, closeModal} ) {
                 className="btn btn-success m-2"
                 onClick={closeModal}
               >
-                Close
+                Cerrar
               </button>
             </div>
           </div>

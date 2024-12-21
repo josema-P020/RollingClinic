@@ -1,5 +1,5 @@
 import React from "react";
-import "./drRegisterCorrect.css";
+import "./registerCorrect.css";
 
 function DrRegisterCorrect({ showModal, closeModal }) {
   if (!showModal) return null;
@@ -29,7 +29,7 @@ function DrRegisterCorrect({ showModal, closeModal }) {
                 className="btn btn-success m-2"
                 onClick={closeModal}
               >
-                Close
+                Cerrar
               </button>
             </div>
           </div>

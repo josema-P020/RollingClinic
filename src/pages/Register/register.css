@@ -9,4 +9,12 @@
   }
   
 
+.bg-form {
+  background: rgb(255,255,255);
+  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgb(172, 219, 222) 100%);
+  border-radius: 15px;
+}
 
+html, #root {
+  background-color: rgb(255, 255, 255);
+}

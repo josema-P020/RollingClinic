@@ -188,7 +188,7 @@ function RegisterDoctor() {
   };
   return (
     <>
-      <div className="container">
+      <div className="container bg-form">
         {/* <div className="row">
           <div className="col-12">
           </div>
@@ -437,7 +437,7 @@ function RegisterDoctor() {
             </div>
             {/* esto debe mandar al error 404 */}
             <p>
-              Acepto los <strong>Terminos y Condiciones</strong>
+              Acepto los <a href="/*">Términos y Condiciones</a>
             </p>
           </div>
 
@@ -453,6 +453,9 @@ function RegisterDoctor() {
           <button type="submit" className="btn btn-primary mx-3">
             Inicia sesion
           </button>
+        </div>
+        <div className="mb-3 d-grid text-center">
+          <p>¿No te sentís bien? Registrate <a href="/registerPatient">acá</a> para pedir turno</p>
         </div>
       </div>
       <DrRegisterCorrect showModal={showModal} closeModal={closeModal} />
